@@ -1,0 +1,38 @@
+{
+  "name": "kata-starter",
+  "version": "0.1.0",
+  "description": "Production-ready NextJS template with monitoring, i18n, database, and AWS integration",
+  "private": true,
+  "packageManager": "yarn@4.10.3",
+  "scripts": {
+    "preinstall": "npx only-allow yarn",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css,scss,yaml,yml}\"",
+    "test:unit": "jest",
+    "test:unit:watch": "yarn test:unit --watch",
+    "test:integration": "NODE_OPTIONS='--experimental-vm-modules' jest --config jest.integration.config.js",
+    "test:integration:watch": "yarn test:integration --watch",
+    "test:acceptance": "NODE_OPTIONS='--experimental-vm-modules' jest --config jest.acceptance.config.js",
+    "test:acceptance:watch": "yarn test:acceptance --watch",
+    "test:all": "yarn run test:unit && yarn run test:integration && yarn run test:acceptance && yarn run test:e2e"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "3.3.1",
+    "@types/jest": "30.0.0",
+    "@types/node": "^24.6.1",
+    "dotenv": "17.2.3",
+    "eslint": "9.36.0",
+    "eslint-config-next": "15.5.4",
+    "eslint-config-prettier": "10.1.8",
+    "jest": "30.2.0",
+    "jest-environment-jsdom": "30.2.0",
+    "jest-junit": "16.0.0",
+    "lint-staged": "16.2.3",
+    "prettier": "3.6.2",
+    "prettier-plugin-organize-imports": "4.3.0",
+    "ts-jest": "29.4.4",
+    "typescript": "5.9.3"
+  }
+}
