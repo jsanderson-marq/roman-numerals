@@ -1,4 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/no-require-imports
 module.exports = {
   preset: "ts-jest/presets/default-esm",
   setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],

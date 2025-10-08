@@ -1,1 +1,3 @@
-export { getWelcomeMessage } from './controller/welcome';
+export function placeholder(input: string): string {
+  return "";
+}
