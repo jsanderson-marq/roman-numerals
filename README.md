@@ -1,13 +1,15 @@
 # Kata Starter
 
-TypeScript template for practicing software development through code katas. Includes comprehensive test infrastructure with unit, integration, and acceptance testing patterns.
+A minimal TypeScript starter for practicing katas with Jest, ESLint, and Prettier.
 
 ## Prerequisites
 
-This project uses [Yarn Berry](https://github.com/yarnpkg/berry) (v4). Before running yarn commands, enable corepack:
+This project uses Yarn 4 (Berry). Make sure Corepack is enabled so the right Yarn version is used:
 
 ```bash
+# If Corepack isn't installed yet
 npm install -g corepack
+# If Corepack isn't enabled yet
 corepack enable
 ```
 
@@ -17,23 +19,20 @@ corepack enable
 # Install dependencies
 yarn install
 
-# Run tests
-yarn test:unit              # Unit tests
-yarn test:integration       # Integration tests
-yarn test:acceptance        # Acceptance tests
-yarn test:all              # All test suites
+# Run tests once
+yarn test
 
-# Development
-yarn lint                  # Lint code
-yarn format                # Format code
-yarn build                 # Build project
+# Watch tests
+yarn test:watch
+
+# Lint and format
+yarn lint
+yarn format
+
+# Build TypeScript
+yarn build
 ```
-
-## Branches
-
-- `main` - Basic folder structure without tests
-- `tests` - Includes example unit, integration, and acceptance tests
 
 ## Learn More
 
-See [CLAUDE.md](./CLAUDE.md) for detailed architecture and development guidance.
+See [CLAUDE.md](./CLAUDE.md) for additional guidance and tips.
