@@ -1,6 +1,6 @@
 # Kata Starter
 
-A minimal TypeScript starter for practicing katas with Jest, ESLint, and Prettier.
+A minimal TypeScript starter for practicing katas with Vitest, ESLint, and Prettier.
 
 ## Prerequisites
 
@@ -24,6 +24,9 @@ yarn test
 
 # Watch tests
 yarn test:watch
+
+# Run tests with web UI
+yarn test:ui
 
 # Lint and format
 yarn lint

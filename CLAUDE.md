@@ -4,7 +4,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Minimal TypeScript kata starter for practicing software development. Simple test infrastructure using Jest for TDD practice.
+Minimal TypeScript kata starter for practicing software development.
+Simple test infrastructure using Vitest for TDD practice.
 
 ## Development Commands
 
@@ -16,6 +17,9 @@ yarn test
 
 # Watch mode for continuous testing
 yarn test:watch
+
+# Run tests with interactive web UI
+yarn test:ui
 ```
 
 ### Code Quality
@@ -41,17 +45,17 @@ yarn build                  # Compile TypeScript
 
 ### Test Organization
 
-Single test layer using Jest:
+Single test layer using Vitest:
 
 - **Tests** (`*.test.ts` in `src/`)
   - Co-located with source files
-  - Default Jest timeout
+  - Global test APIs enabled (describe, it, expect)
   - Import aliases: `@/*` for src paths, `~src` for index
   - Example: `src/index.test.ts`
 
 ### Module Resolution
 
-Path aliases configured in `tsconfig.json`:
+Path aliases configured in `tsconfig.json` and `vitest.config.ts`:
 
 - `@/*` - Maps to `src/*`
 - `~src` - Maps to `src/index.ts`
@@ -74,5 +78,6 @@ describe("When [condition]", () => {
 
 - Package manager: **yarn v4** (enforced via preinstall script)
 - Node version specified in `.nvmrc`
-- ESM modules with ts-jest preset
-- Test results output to `test-results/` directory in JUnit XML format
+- Test framework: **Vitest 4** with native ESM support
+- Configuration: `vitest.config.ts` with path aliases and dotenv setup
+- Interactive UI available via `yarn test:ui`
